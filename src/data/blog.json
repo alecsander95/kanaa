@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "slug": "guia-tulum",
+    "title": "Guía definitiva para visitar Tulum",
+    "excerpt": "Descubre los mejores cenotes, restaurantes y playas escondidas en este paraíso del Caribe.",
+    "date": "2023-10-15",
+    "image": "/images/blog1.jpg"
+  },
+  {
+    "id": "2",
+    "slug": "invertir-rentas-vacacionales",
+    "title": "¿Por qué invertir en rentas vacacionales?",
+    "excerpt": "Analizamos el mercado inmobiliario actual y las oportunidades de retorno de inversión.",
+    "date": "2023-11-02",
+    "image": "/images/blog2.jpg"
+  },
+  {
+    "id": "3",
+    "slug": "tips-anfitriones",
+    "title": "5 Tips para ser un Superanfitrión",
+    "excerpt": "Mejora tus reseñas y fideliza a tus huéspedes con estos sencillos consejos.",
+    "date": "2023-11-20",
+    "image": "/images/blog3.jpg"
+  }
+]

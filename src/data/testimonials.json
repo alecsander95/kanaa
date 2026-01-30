@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Ana García",
+    "role": "Huésped",
+    "content": "Una experiencia inolvidable. La atención al detalle y la calidad de la propiedad superaron mis expectativas.",
+    "avatar": "/images/avatar1.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Carlos Méndez",
+    "role": "Propietario",
+    "content": "Desde que KANAA gestiona mi propiedad, mis ingresos han aumentado y no tengo que preocuparme por nada.",
+    "avatar": "/images/avatar2.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Sarah Jenkins",
+    "role": "Huésped",
+    "content": "Truly a home away from home. The service was impeccable and the location was perfect.",
+    "avatar": "/images/avatar3.jpg"
+  }
+]

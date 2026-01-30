@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "title": "Villa Mar Azul",
+    "location": "Tulum, México",
+    "price": 350,
+    "rating": 4.9,
+    "image": "/images/prop1.jpg",
+    "guests": 6,
+    "bedrooms": 3,
+    "bathrooms": 3
+  },
+  {
+    "id": "2",
+    "title": "Casa de la Selva",
+    "location": "Playa del Carmen, México",
+    "price": 220,
+    "rating": 4.8,
+    "image": "/images/prop2.jpg",
+    "guests": 4,
+    "bedrooms": 2,
+    "bathrooms": 2
+  },
+  {
+    "id": "3",
+    "title": "Penthouse Ocean View",
+    "location": "Cancún, México",
+    "price": 450,
+    "rating": 5.0,
+    "image": "/images/prop3.jpg",
+    "guests": 8,
+    "bedrooms": 4,
+    "bathrooms": 4
+  },
+  {
+    "id": "4",
+    "title": "Cabaña Eco-Chic",
+    "location": "Bacalar, México",
+    "price": 180,
+    "rating": 4.7,
+    "image": "/images/prop4.jpg",
+    "guests": 2,
+    "bedrooms": 1,
+    "bathrooms": 1
+  }
+]

@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto-serif), serif;
+    font-weight: 500;
+  }
+}
+
+@theme {
+  --font-sans: var(--font-roboto-serif);
+  --font-serif: var(--font-roboto-serif);
+
+  /* Colors */
+  --color-grey-light: var(--grey-light);
+  --color-grey-light-hover: var(--grey-light-hover);
+  --color-grey-light-active: var(--grey-light-active);
+  --color-grey-normal: var(--grey-normal);
+  --color-grey-normal-hover: var(--grey-normal-hover);
+  --color-grey-normal-active: var(--grey-normal-active);
+  --color-grey-dark: var(--grey-dark);
+  --color-grey-dark-hover: var(--grey-dark-hover);
+  --color-grey-dark-active: var(--grey-dark-active);
+  --color-grey-darker: var(--grey-darker);
+
+  --color-gold-light: var(--gold-light);
+  --color-gold-light-hover: var(--gold-light-hover);
+  --color-gold-light-active: var(--gold-light-active);
+  --color-gold-normal: var(--gold-normal);
+  --color-gold-normal-hover: var(--gold-normal-hover);
+  --color-gold-normal-active: var(--gold-normal-active);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-dark-hover: var(--gold-dark-hover);
+  --color-gold-dark-active: var(--gold-dark-active);
+  --color-gold-darker: var(--gold-darker);
+
+  --color-green-light: var(--green-light);
+  --color-green-light-hover: var(--green-light-hover);
+  --color-green-light-active: var(--green-light-active);
+  --color-green-normal: var(--green-normal);
+  --color-green-normal-hover: var(--green-normal-hover);
+  --color-green-normal-active: var(--green-normal-active);
+  --color-green-dark: var(--green-dark);
+  --color-green-dark-hover: var(--green-dark-hover);
+  --color-green-dark-active: var(--green-dark-active);
+  --color-green-darker: var(--green-darker);
+
+  --color-beige-light: var(--beige-light);
+  --color-beige-light-hover: var(--beige-light-hover);
+  --color-beige-light-active: var(--beige-light-active);
+  --color-beige-normal: var(--beige-normal);
+  --color-beige-normal-hover: var(--beige-normal-hover);
+  --color-beige-normal-active: var(--beige-normal-active);
+  --color-beige-dark: var(--beige-dark);
+  --color-beige-dark-hover: var(--beige-dark-hover);
+  --color-beige-dark-active: var(--beige-dark-active);
+  --color-beige-darker: var(--beige-darker);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Grey Palette */
+  --grey-light: #F3F4F6;
+  --grey-light-hover: #E5E7EB;
+  --grey-light-active: #D1D5DB;
+  --grey-normal: #9CA3AF;
+  --grey-normal-hover: #6B7280;
+  --grey-normal-active: #4B5563;
+  --grey-dark: #374151;
+  --grey-dark-hover: #1F2937;
+  --grey-dark-active: #111827;
+  --grey-darker: #030712;
+
+  /* Gold Palette */
+  --gold-light: #FBF7E3;
+  --gold-light-hover: #F5EFC5;
+  --gold-light-active: #EFE4A0;
+  --gold-normal: #C5A028;
+  --gold-normal-hover: #A8861D;
+  --gold-normal-active: #8C6D14;
+  --gold-dark: #745A10;
+  --gold-dark-hover: #5C460C;
+  --gold-dark-active: #453308;
+  --gold-darker: #2E2204;
+
+  /* Green Palette */
+  --green-light: #E6F0EB;
+  --green-light-hover: #CCE0D6;
+  --green-light-active: #B3D1C2;
+  --green-normal: #4A7C59;
+  --green-normal-hover: #3D6649;
+  --green-normal-active: #305039;
+  --green-dark: #233A2A;
+  --green-dark-hover: #1A2B1F;
+  --green-dark-active: #111C14;
+  --green-darker: #121E16; /* Más oscuro para el footer */
+
+  /* Beige Palette */
+  --beige-light: #FDFBF7;
+  --beige-light-hover: #FAF6EF;
+  --beige-light-active: #F5EFE4;
+  --beige-normal: #EBE5D9;
+  --beige-normal-hover: #E0D9CA;
+  --beige-normal-active: #D6CCBB;
+  --beige-dark: #C2B8A6;
+  --beige-dark-hover: #AD9F8A;
+  --beige-dark-active: #96866E;
+  --beige-darker: #594D3C;
+
+  /* Base */
+  --background: var(--beige-light);
+  --foreground: var(--grey-darker);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-sm;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "GRAD" 0;
 }

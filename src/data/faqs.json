@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "question": "¿Cómo puedo reservar una propiedad?",
+    "answer": "Puedes reservar directamente a través de nuestro sitio web seleccionando las fechas y la propiedad deseada, o contactando a nuestro equipo de reservas."
+  },
+  {
+    "id": "2",
+    "question": "¿Qué incluye el servicio de gestión de propiedades?",
+    "answer": "Incluye marketing, gestión de reservas, limpieza, mantenimiento, atención al huésped 24/7 y optimización de precios."
+  },
+  {
+    "id": "3",
+    "question": "¿Cuál es la política de cancelación?",
+    "answer": "Nuestra política estándar permite cancelación gratuita hasta 14 días antes de la llegada. Consulta los detalles específicos de cada propiedad."
+  }
+]
