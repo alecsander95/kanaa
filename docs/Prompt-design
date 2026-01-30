@@ -1,0 +1,332 @@
+Eres un generador de UI + Front-end. Construye el front-end completo del sitio de KANAA basado en las pantallas y guías visuales proporcionadas.
+Regla principal: Mantén idénticos el look & feel, jerarquías, espaciados, composición, componentes e interacciones de las referencias (home, property management, calculadora de ingresos, nosotros, contáctanos, footer, header, sliders, acordeones, etc.). No inventes un estilo nuevo.
+
+1) Objetivo del entregable
+
+Generar un proyecto de front-end listo para entregar a desarrollo (ellos conectan back-end/servicios después).
+
+Implementar rutas/páginas, componentes, layout, estados visuales, y comportamiento UI.
+
+Dejar datos mock (JSON/local) para cards/listados/testimonios/FAQ/blog.
+
+2) Stack y convenciones (obligatorio)
+
+Framework: Next.js (App Router) o React + Vite (elige uno, prioriza Next.js).
+
+Estilos: TailwindCSS (con tailwind.config extendido para tokens).
+
+Componentes: simples y reutilizables (no sobre-ingeniería).
+
+Accesibilidad: labels, focus states visibles, contraste, navegación con teclado.
+
+Performance: imágenes con lazy-load, next/image si usas Next.
+
+Animaciones: sutiles (transiciones 150–250ms), sin efectos exagerados.
+
+3) Identidad visual (tokens)
+
+Crea un sistema de diseño en código (tokens) usando las guías:
+
+Tipografía
+
+Headings (H1–H4): Roboto Serif
+
+Body/UI: Gilroy
+
+Define escala tipográfica para: display, h1, h2, h3, body, small, caption.
+
+Paleta (crear como tokens por familia)
+
+grey: light / hover / active / normal / dark / darker
+
+gold: light / hover / active / normal / dark / darker
+
+green: light / hover / active / normal / dark / darker
+
+beige: light / hover / active / normal / dark / darker
+
+Importante: respeta el carácter “premium cálido” (beige + gold) con contraste sobrio (green oscuro y greys).
+
+Componentes con glass/overlay
+
+Los formularios del hero tienen un contenedor tipo glassmorphism: fondo semi-transparente + blur + bordes sutiles + radios grandes.
+
+Logo
+
+Considera variantes claro/oscuro según el fondo (por ejemplo en header sobre imagen y footer verde oscuro).
+
+4) Estructura del sitio (rutas)
+
+Implementa estas rutas:
+
+/ Home
+
+/propiedades (listado simple, aunque sea mock)
+
+/nosotros
+
+/gestion-de-propiedades (Property Management)
+
+/calculadora-de-ingresos (Potential Revenue Calculator)
+
+/contacto (Contáctanos)
+
+/legal/privacidad
+
+/legal/terminos
+
+/blog (listado simple, mock)
+
+/blog/[slug] (detalle simple, mock)
+
+5) Layout global (header/footer)
+
+Header (sticky sobre hero)
+
+Logo izquierda
+
+Menú: Inicio, Propiedades, Nosotros, Gestión de propiedades, Calculadora de ingresos
+
+CTA derecha: “Reserva ahora” (botón claro con ícono flecha)
+
+En mobile: menú hamburguesa + CTA visible o dentro del drawer (según se vea igual a referencia).
+
+Footer
+
+Fondo verde oscuro
+
+4 columnas: KANAA, Propiedades, Property Management, Legal
+
+Links según referencia (sobre nosotros, nuestro equipo, experiencia & historia, listado, destacadas, guías y tips, únete como propietario, property management, calculadora, privacidad, términos, cookies).
+
+Social icons abajo izquierda.
+
+Copyright.
+
+6) Páginas y secciones (replicar composición e interacciones)
+A) Home /
+
+Secciones en este orden (idéntico a referencia):
+
+Hero con imagen grande + headline “Siéntete como en casa, en cualquier lugar.”
+
+Subtexto
+
+Buscador estilo píldora (campos: destino, fecha, etc. según mock).
+
+Conoce nuestros alojamientos
+
+Carrusel horizontal de cards (4 visibles desktop, swipe en mobile).
+
+Cada card: imagen, nombre, rating, precio/noche, ubicación.
+
+Bloque editorial (imagen + texto “Más que hospedaje…” con CTA “Ver alojamientos”)
+
+Métricas (huéspedes felices, años de experiencia, estancias realizadas, valoración promedio)
+
+Property Management pensado para propietarios (bloque verde oscuro + texto + CTA)
+
+Descubre cuánto puede generar tu propiedad (teaser con CTA a calculadora)
+
+Experiencias que nos respaldan (slider de testimonios, 3 cards en desktop, 1 en mobile)
+
+Guías y consejos (3 cards blog)
+
+Preguntas frecuentes (acordeón)
+
+Footer
+
+Interacciones:
+
+Carruseles con flechas + swipe.
+
+Acordeón FAQ: abre/cierra con animación suave.
+
+Hover states en cards y botones.
+
+B) Gestión de propiedades /gestion-de-propiedades
+
+Estructura:
+
+Hero con imagen + título “Convierte tu propiedad en un activo rentable”
+
+Form overlay con campos (nombre, apellidos, email, número telefónico, “¿dónde se encuentra tu propiedad?”, “Nombre del anfitrión (opcional)”) + botón enviar.
+
+Gestión inteligente de propiedades (grid de imágenes)
+
+Bloque verde “Pensado para quienes buscan tranquilidad y resultados” + CTA
+
+Gestión de alquileres vacacionales simplificada (lista de beneficios con íconos)
+
+Métricas
+
+Testimonios slider
+
+FAQ acordeón
+
+CTA final en bloque verde (con imagen y botón “Habla con un asesor”)
+
+Footer
+
+C) Calculadora de ingresos /calculadora-de-ingresos
+
+Hero “Descubre cuánto puede generar tu propiedad” + explicación
+
+Form overlay con campos:
+
+Dirección de propiedad
+
+Cantidad de huéspedes
+
+Tipo de propiedad
+
+No. de habitaciones
+
+No. de baños
+
+Años de propiedad
+
+Botón “Calcular precio”
+
+Secciones:
+
+“¿Por qué elegir KANAA para gestionar tu propiedad?” (lista con íconos)
+
+“Optimización de ingresos” (bullets con íconos)
+
+“Gestión de reservas” (bloque verde con bullets)
+
+Métricas
+
+Testimonios
+
+FAQ
+
+CTA final repitiendo el módulo de calculadora en bloque verde
+
+Footer
+
+Comportamiento calculadora (mock):
+
+Al enviar, muestra una tarjeta de resultados abajo (estimación mensual/anual, ocupación estimada, ADR, rango min/max).
+
+Fórmula simple mock (no necesita ser real): usar huéspedes/habitaciones/años/tipo para modificar un base rate.
+
+D) Nosotros /nosotros
+
+Hero “Alquileres vacacionales fáciles”
+
+Sección “¿Quiénes somos?” (texto + collage de imágenes)
+
+Bloque verde “¿Por qué estamos aquí?” (texto + CTA “Contáctanos”)
+
+“Nuestra experiencia en acción” (4 cards con íconos y títulos):
+
+Selección estratégica
+
+Desarrollo inteligente
+
+Gestión eficiente
+
+Oportunidades claras
+
+“Únete a nuestro equipo” (imagen + texto + CTA “Conoce nuestras vacantes”)
+
+Footer
+
+E) Contacto /contacto
+
+Recrear exactamente el layout:
+
+Hero con imagen interior + texto “Hablemos de tu proyecto”
+
+Form overlay glass con:
+
+Nombre(s), Apellidos
+
+Email, Whatsapp
+
+Motivo de contacto (select)
+
+Textarea “Cuéntanos brevemente qué necesitas”
+
+Botón “Enviar”
+
+Abajo: bloque “Únete a nuestro equipo” (igual al de Nosotros)
+
+Footer
+
+7) Componentes reutilizables (crear librería interna)
+
+Header, Footer
+
+Button (primary/secondary/ghost, con ícono flecha)
+
+Input, Select, Textarea (estilo del diseño)
+
+GlassPanel (overlay con blur)
+
+PropertyCard, TestimonialCard, BlogCard
+
+Carousel (reutilizable)
+
+Accordion (FAQ)
+
+StatsRow (métricas)
+
+Section wrapper con max-width y paddings responsivos
+
+ImageCollage (para “Quiénes somos”)
+
+8) Reglas responsive (MUY IMPORTANTE)
+
+Implementa mobile-first con breakpoints claros:
+
+sm 640, md 768, lg 1024, xl 1280, 2xl 1536
+Reglas clave:
+
+Hero: texto y form overlay pasan a stack vertical en mobile, con padding generoso.
+
+Carruseles: 1 card visible en mobile, 2 en tablet, 3–4 en desktop.
+
+Grid de imágenes: 1 columna mobile, 2 tablet, 3 desktop.
+
+Footer: columnas apiladas en mobile.
+
+Tipografía: H1 reduce en mobile sin perder jerarquía.
+
+Botones y campos: altura táctil mínima 44px.
+
+Evitar overflow horizontal.
+
+9) Estados y validación (front-end)
+
+Validación básica en forms (required, email).
+
+Estados: default, hover, focus, disabled, loading.
+
+Enviar form: mostrar toast o inline success (“Gracias, te contactaremos pronto.”) sin back-end (mock).
+
+10) Datos mock (crear archivos)
+
+properties.json (8–12 items)
+
+testimonials.json (6 items)
+
+faqs.json (8–10 items)
+
+blog.json (6 items con slug)
+
+motivosContacto.json (lista select)
+
+11) Criterios de calidad
+
+UI debe verse lo más cercana posible a las pantallas: espaciados, bordes, radios, colores, overlays, y tono.
+
+No uses colores fuera de la paleta.
+
+No cambies estructura: respeta orden y layout de secciones.
+
+Código organizado por components/, pages/ o app/, data/, styles/.
+
+Entrega: genera todo el proyecto con rutas, componentes, estilos y datos mock listos para correr.
