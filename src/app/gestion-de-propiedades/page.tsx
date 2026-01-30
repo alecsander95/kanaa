@@ -74,7 +74,7 @@ export default function PropertyManagementPage() {
                         <Input placeholder="Nombre del anfitrión" className="bg-white/20 border-white/10 text-white placeholder:text-white/50 focus-visible:ring-white/30" />
                      </div>
 
-                     <Button variant="white" className="w-full mt-2" withArrow>Enviar</Button>
+                     <Button className="w-full mt-2" withArrow>Enviar</Button>
                    </form>
                 </div>
              </div>
@@ -121,7 +121,7 @@ export default function PropertyManagementPage() {
                Ideal para propietarios que quieren maximizar ingresos sin encargarse de la gestión diaria de su propiedad.
              </p>
              <div>
-               <Button variant="white" withArrow>Conoce más</Button>
+               <Button withArrow>Conoce más</Button>
              </div>
            </div>
            <div className="w-full md:w-1/2 relative min-h-[500px]">
@@ -241,7 +241,7 @@ export default function PropertyManagementPage() {
                Nos encargamos de la gestión completa de tu inversión para que tú obtengas ingresos, tranquilidad y tiempo para lo que más disfrutas.
              </p>
            </div>
-           <Button variant="white" size="lg" className="px-8 text-lg" withArrow>
+           <Button size="lg" className="px-8 text-lg" withArrow>
              Habla con un asesor
            </Button>
         </div>

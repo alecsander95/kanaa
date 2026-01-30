@@ -76,7 +76,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button variant="white" className="w-auto px-8" withArrow>Enviar</Button>
+                  <Button className="w-auto" withArrow>Enviar</Button>
                 </form>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                <p className="text-grey-normal mb-8 text-lg leading-relaxed">
                  Si te interesa formar parte de un equipo que construye proyectos con propósito, toma decisiones basadas en datos y apuesta por la excelencia operativa, nos encantará conocerte.
                </p>
-               <Button className="bg-white text-green-darker border border-gray-200 hover:bg-gray-50 rounded-full shadow-sm" withArrow>Conoce nuestras vacantes</Button>
+               <Button withArrow>Conoce nuestras vacantes</Button>
              </div>
            </div>
         </div>

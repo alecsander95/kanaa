@@ -152,10 +152,9 @@ export default function CalculatorPage() {
                       </div>
                     </div>
                     <Button 
-                      size="lg" 
-                      variant="white"
-                      className="w-full text-lg mt-4" 
+                      className="w-full mt-4" 
                       disabled={loading}
+                      withArrow
                     >
                       {loading ? "Calculando..." : "Calcular ahora"}
                     </Button>

@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils"
 import { ArrowRight } from "lucide-react"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-[10px] text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group",
   {
     variants: {
       variant: {
-        default: "bg-green-normal text-white hover:bg-green-normal-hover",
+        default: "bg-[#f2f0ea] text-[#a59973] hover:bg-[#E3DFD4] hover:text-[#7C7356]",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-gold-normal text-white hover:bg-gold-normal-hover",
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         white: "bg-white text-green-darker hover:bg-gray-100",
       },
       size: {
-        default: "h-14 px-8 py-2 text-base",
+        default: "h-auto py-[14px] pl-[24px] pr-[14px] text-base",
         sm: "h-10 px-4 text-sm",
         lg: "h-16 px-10 text-lg",
         icon: "h-10 w-10",
@@ -58,20 +58,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 return "bg-white text-gold-normal"
             case 'default':
             default:
-                return "bg-white text-green-normal"
+                return "bg-white text-[#a59973] group-hover:bg-[#A59973]"
         }
     }
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }), withArrow ? "pl-8 pr-2 justify-between gap-4" : "")}
+        className={cn(buttonVariants({ variant, size, className }), withArrow ? "pl-[24px] pr-[14px] justify-between gap-3" : "")}
         ref={ref}
         {...props}
       >
-        <span>{children}</span>
+        <span className="font-bold">{children}</span>
         {withArrow && (
-            <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-transform group-hover:translate-x-1", getArrowStyles())}>
-                <ArrowRight className="h-5 w-5" />
+            <div className={cn("flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300", getArrowStyles())}>
+                <ArrowRight strokeWidth={3} className="h-4 w-4 group-hover:text-[#F6F5F1] group-hover:-rotate-30 group-hover:translate-x-0.5 transition-all duration-300" />
             </div>
         )}
       </Comp>

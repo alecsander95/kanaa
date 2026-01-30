@@ -64,7 +64,7 @@ export function Footer() {
           
            {/* CTA Button in Footer */}
            <div>
-              <Button variant="white" withArrow>
+              <Button withArrow>
                 Contáctanos
               </Button>
            </div>

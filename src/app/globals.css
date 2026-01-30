@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @layer base {
+  body {
+    padding: 1rem; /* Fallback */
+    padding: calc(var(--spacing) * 4);
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-roboto-serif), serif;
     font-weight: 500;

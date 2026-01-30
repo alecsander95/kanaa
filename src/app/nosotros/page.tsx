@@ -42,7 +42,7 @@ export default function AboutPage() {
               <p className="text-grey-normal leading-relaxed">
                 En KANAA combinamos estrategia inmobiliaria, tecnología y operación profesional para transformar propiedades en activos rentables, bien administrados y sin complicaciones. Nos enfocamos en cada detalle para que tú solo disfrutes los resultados.
               </p>
-              <Button variant="outline" className="rounded-full mt-4" withArrow>Conoce nuestros proyectos</Button>
+              <Button className="mt-4" withArrow>Conoce nuestros proyectos</Button>
             </div>
             <div className="w-full md:w-1/2 relative h-[500px]">
                {/* Collage Effect Mock */}
@@ -72,7 +72,7 @@ export default function AboutPage() {
                <p className="text-white/80 leading-relaxed">
                  Por eso estamos redefiniendo la forma en que funcionan los alquileres vacacionales: con procesos claros, tecnología inteligente y un enfoque centrado en la experiencia del huésped y del propietario.
                </p>
-               <Button variant="white" className="mt-4" withArrow>Contáctanos</Button>
+               <Button className="mt-4" withArrow>Contáctanos</Button>
              </div>
            </div>
         </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                <p className="text-grey-normal mb-8 text-lg leading-relaxed">
                  Si te interesa formar parte de un equipo que construye proyectos con propósito, toma decisiones basadas en datos y apuesta por la excelencia operativa, nos encantará conocerte.
                </p>
-               <Button variant="white" className="border border-gray-200 shadow-sm" withArrow>Conoce nuestras vacantes</Button>
+               <Button withArrow>Conoce nuestras vacantes</Button>
              </div>
            </div>
         </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -17,7 +17,7 @@ const navigation = [
 
 import { Logo } from "@/components/ui/logo";
 
-export function Header() {
+export function Header({ variant = 'default' }: { variant?: 'default' | 'dark' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const pathname = usePathname();
   const [scrolled, setScrolled] = React.useState(false);
@@ -32,16 +32,21 @@ export function Header() {
 
   return (
     <header
+      style={{
+        background: variant === 'dark' ? "white" : "radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.045) 77.08%, rgba(255, 255, 255, 0) 100%)",
+        backgroundBlendMode: variant === 'dark' ? "normal" : "overlay, normal",
+        backdropFilter: variant === 'dark' ? "none" : "blur(22.39px)",
+        WebkitBackdropFilter: variant === 'dark' ? "none" : "blur(22.39px)"
+      }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        "fixed top-[2.125rem] left-1/2 -translate-x-1/2 z-50 flex w-[96%] items-center justify-between rounded-xl border border-white/10 shadow-lg px-12 py-5 transition-all duration-300",
+        scrolled || variant === 'dark' ? "bg-white/90 border-gray-100 shadow-sm" : ""
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Logo 
-            variant={scrolled ? 'color' : 'white'} 
+            variant={scrolled || variant === 'dark' ? 'color' : 'white'} 
             className="h-12 w-auto" 
             aria-label="KANAA - Comfort · Calmness · Peace"
           />
@@ -54,10 +59,12 @@ export function Header() {
               key={item.name}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-gold-normal",
-                pathname === item.href 
-                  ? "text-gold-normal" 
-                  : (scrolled ? "text-grey-dark" : "text-white")
+                "text-sm transition-colors hover:text-[#e3dfd4] hover:mix-blend-normal",
+                variant === 'dark'
+                    ? "text-[#4c4d4c] font-medium"
+                    : pathname === item.href 
+                        ? "text-white mix-blend-difference font-bold" 
+                        : "text-white mix-blend-difference font-medium"
               )}
             >
               {item.name}
@@ -67,24 +74,18 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <Button 
-            size="sm"
-            variant={scrolled ? "beige" : "white"}
-            className="rounded-full font-medium transition-all shadow-sm"
-            withArrow
-          >
+          <Button withArrow>
             Reserva ahora
           </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className={cn("lg:hidden p-2", scrolled ? "text-grey-darker" : "text-white")}
+          className={cn("lg:hidden p-2", scrolled || variant === 'dark' ? "text-grey-darker" : "text-white")}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
         </button>
-      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
@@ -102,7 +103,7 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button variant="secondary" className="w-full justify-center" withArrow>
+          <Button className="w-full justify-center" withArrow>
             Reserva ahora
           </Button>
         </div>

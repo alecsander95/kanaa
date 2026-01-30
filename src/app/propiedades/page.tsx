@@ -8,7 +8,7 @@ import propertiesData from "@/data/properties.json";
 export default function PropertiesPage() {
   return (
     <div className="min-h-screen bg-beige-light">
-      <Header />
+      <Header variant="dark" />
       
       {/* Hero Section */}
       <div className="relative pt-32 pb-5 bg-white">
@@ -20,7 +20,7 @@ export default function PropertiesPage() {
                         Explora nuestra colección exclusiva de alojamientos vacacionales seleccionados por su calidad, ubicación y diseño.
                     </p>
                 </div>
-                <Button variant="outline" className="rounded-full border-grey-light text-grey-darker hover:bg-grey-light/10 gap-2">
+                <Button className="gap-2">
                     <Filter className="h-4 w-4" />
                     Filtrar propiedades
                 </Button>
@@ -85,7 +85,7 @@ export default function PropertiesPage() {
                         ${property.price} <span className="text-grey-normal text-xs font-normal">/ noche</span>
                         </p>
                     </div>
-                    <Button className="bg-green-darker text-white hover:bg-green-normal px-6" withArrow>Ver detalles</Button>
+                    <Button withArrow>Ver detalles</Button>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function PropertiesPage() {
                         ${property.price} <span className="text-grey-normal text-xs font-normal">/ noche</span>
                         </p>
                     </div>
-                    <Button className="rounded-full bg-green-darker text-white hover:bg-green-normal px-6">Ver detalles</Button>
+                    <Button withArrow>Ver detalles</Button>
                   </div>
                 </div>
               </div>

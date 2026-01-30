@@ -69,7 +69,7 @@ export default function Home() {
              <p className="text-grey-normal max-w-xl text-lg mb-4">
                Todos nuestros alojamientos están destinado a que pases una estadía de relajación
              </p>
-             <Button variant="outline" className="rounded-full border border-gray-200 text-sm h-10 px-6 hover:bg-gray-50 text-grey-darker" withArrow>Ver todos los alojamientos</Button>
+             <Button withArrow>Ver todos los alojamientos</Button>
           </div>
           
           {/* Mock Grid */}
@@ -122,7 +122,7 @@ export default function Home() {
                    <p className="text-grey-dark text-lg leading-relaxed mb-8">
                      En KANNA disfrutas espacios cómodos, tranquilos y pensados para que te relajes desde el primer momento.
                    </p>
-                   <Button variant="outline" className="rounded-full border border-green-darker text-green-darker hover:bg-green-darker hover:text-white transition-colors" withArrow>
+                   <Button withArrow>
                      Ver alojamientos
                    </Button>
                 </div>
@@ -174,7 +174,7 @@ export default function Home() {
                    <p className="text-white/80 text-lg mb-8 max-w-lg">
                      Nos encargamos de todo: desde la promoción hasta la limpieza, para que tú solo disfrutes de los ingresos.
                    </p>
-                   <Button className="bg-white text-green-darker hover:bg-gray-100 rounded-full px-8 py-6 text-base" withArrow>
+                   <Button withArrow>
                      Quiero saber más
                    </Button>
                 </div>
@@ -226,7 +226,7 @@ export default function Home() {
                     <span className="text-sm text-grey-normal block mb-1">Ingreso mensual estimado</span>
                     <span className="text-4xl font-serif font-bold text-green-darker">$25,000 - $35,000 MXN</span>
                  </div>
-                 <Button className="bg-green-darker hover:bg-green-normal text-white rounded-full px-8 py-6" withArrow>
+                 <Button withArrow>
                     Ver desglose completo
                  </Button>
               </div>
@@ -282,7 +282,7 @@ export default function Home() {
                     Descubre destinos, consejos y guías para hacer de tu estancia una experiencia inolvidable.
                   </p>
                </div>
-               <Button variant="outline" className="rounded-full border border-gray-200 text-sm h-10 px-6 hover:bg-gray-50 text-grey-darker hidden md:flex" withArrow>
+               <Button className="hidden md:flex" withArrow>
                  Ver todos los artículos
                </Button>
             </div>
@@ -306,7 +306,7 @@ export default function Home() {
             </div>
             
             <div className="mt-8 text-center md:hidden">
-               <Button variant="outline" className="rounded-full border border-gray-200 text-sm h-10 px-6 hover:bg-gray-50 text-grey-darker w-full" withArrow>
+               <Button className="w-full" withArrow>
                  Ver todos los artículos
                </Button>
             </div>
